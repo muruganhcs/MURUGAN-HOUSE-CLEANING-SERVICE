@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Murugan House Cleaning Service</title>
+<meta name="description" content="Professional house cleaning service by Murugan House Cleaning Service.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#102d55;background:#fff;line-height:1.55}
+:root{--navy:#062b5c;--blue:#1268d5;--gold:#f5bd27;--light:#f3f8ff;--muted:#60708a}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff;box-shadow:0 5px 20px #001c3a35}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.logoMark{width:58px;height:58px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:30px;font-weight:900;background:radial-gradient(circle at 35% 30%,#1f5fa4,#062b5c 68%);box-shadow:0 0 0 3px #f5bd2722,0 9px 22px #001c3a55;position:relative;flex:0 0 auto;font-family:Georgia,'Times New Roman',serif;color:var(--gold);text-shadow:0 2px 5px #0006}.logoMark:before{content:'⌂';position:absolute;font-size:22px;line-height:1;color:#fff;transform:translateY(2px);z-index:0}.logoMark{isolation:isolate}.logoMark::after{content:'M';position:absolute;font-size:29px;color:var(--gold);font-weight:900;z-index:1;transform:translateY(-1px);text-shadow:0 2px 5px #0008}
+.brand b{font-size:25px;color:var(--gold);display:block;line-height:1;letter-spacing:3px;font-weight:900;text-shadow:0 1px 0 #fff3,0 3px 12px #0006;font-family:Georgia,'Times New Roman',serif}
+.brand small{font-size:9px;letter-spacing:1.7px;color:#eaf3ff;display:block;margin-top:5px;font-weight:700}
+nav{display:flex;gap:24px;align-items:center}
+nav a{color:#fff;text-decoration:none;font-size:14px;font-weight:600}
+nav a:hover{color:var(--gold)}
+.topBtns{display:flex;gap:8px}.topBtn{padding:10px 14px;border-radius:22px;text-decoration:none;font-weight:700;font-size:13px}.call{background:#fff;color:var(--navy)}.wa{background:#18b957;color:#fff}
+.hero{background:linear-gradient(100deg,#f9fcff 0%,#edf6ff 58%,#dceeff 100%);padding:70px 0 65px;overflow:hidden}
+.heroGrid{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:45px}
+.eyebrow{color:var(--blue);font-weight:800;letter-spacing:1.6px;font-size:13px}
+h1{font-size:58px;line-height:1.02;margin:15px 0;color:var(--navy)}
+h1 span{color:var(--blue)}
+.hero p{font-size:18px;color:#53647c;max-width:610px}
+.trust{display:flex;gap:22px;margin:25px 0;flex-wrap:wrap}.trust div{font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px}
+.iconCircle{width:31px;height:31px;border-radius:50%;background:#dcecff;display:grid;place-items:center}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;padding:14px 21px;border-radius:28px;font-weight:800}
+.btnBlue{background:var(--blue);color:#fff;box-shadow:0 8px 20px #1268d533}.btnGold{background:var(--gold);color:#092850}
+.heroVisual{min-height:430px;border-radius:30px;background:linear-gradient(145deg,#c9e6ff,#fff);position:relative;display:flex;align-items:center;justify-content:center;box-shadow:0 25px 55px #123b6320;overflow:hidden}
+.cleanPerson{font-size:170px;filter:drop-shadow(0 15px 12px #12355b25)}
+.quote{position:absolute;right:25px;top:25px;font-size:25px;font-weight:900;color:var(--navy);font-style:italic;text-align:center}
+.floors{position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(#dbeeff,#b9dcfb);opacity:.7}
+section{padding:72px 0}
+.sectionHead{margin-bottom:30px}.sectionHead .eyebrow{margin-bottom:5px}.sectionHead h2{font-size:38px;color:var(--navy)}.sectionHead p{color:var(--muted)}
+.services{background:#fff}
+.serviceGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.card{background:#fff;border:1px solid #e3ebf5;border-radius:17px;overflow:hidden;box-shadow:0 9px 25px #0a37600d;transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:0 15px 32px #0a37601a}
+.cardTop{height:120px;background:linear-gradient(135deg,#eaf5ff,#d7eaff);display:grid;place-items:center;font-size:55px}
+.cardBody{padding:17px}.card h3{font-size:17px;margin-bottom:6px}.card p{font-size:13px;color:var(--muted)}
+.about{background:#f5f9fe}.aboutGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:center}
+.aboutVisual{height:330px;border-radius:22px;background:linear-gradient(145deg,#dceeff,#fff);display:grid;place-items:center;font-size:120px}
+.aboutText h2{font-size:38px;margin-bottom:12px}.aboutText p{color:var(--muted);margin-bottom:18px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:12px}.feature{display:flex;gap:10px;align-items:center;background:#fff;padding:13px;border-radius:12px}.feature strong{font-size:14px}.feature span{font-size:12px;color:var(--muted);display:block}
+.galleryGrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}.photo{min-height:180px;border-radius:18px;background:linear-gradient(135deg,#d9edff,#f9fcff);display:grid;place-items:center;font-size:65px;border:1px solid #e2edf8}.photo.big{grid-row:span 2;min-height:375px;font-size:110px}
+.reviews{background:#eaf4ff}.reviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{background:#fff;border-radius:17px;padding:23px;box-shadow:0 8px 24px #12355b0c}.stars{color:#f4b51f;font-size:20px}.review p{margin:10px 0;color:#56677f;font-size:14px}.review b{font-size:14px}
+.contact{background:linear-gradient(120deg,var(--navy),#0d579e);color:#fff}.contactBox{text-align:center}.contact h2{font-size:42px;margin-bottom:8px}.contact p{color:#dcecff;margin-bottom:24px}.contactBtns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+footer{background:#031f43;color:#c9d9eb;padding:42px 0 20px}.footerGrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}.footerTitle{color:#fff;font-size:18px;margin-bottom:10px}.footerBrand b{color:var(--gold);font-size:24px}.footerGrid a{color:#c9d9eb;text-decoration:none;display:block;margin:5px 0;font-size:14px}.copy{border-top:1px solid #315274;margin-top:30px;padding-top:16px;text-align:center;font-size:12px}
+@media(max-width:950px){nav{display:none}.heroGrid,.aboutGrid{grid-template-columns:1fr}.serviceGrid{grid-template-columns:repeat(2,1fr)}.footerGrid{grid-template-columns:1fr 1fr}h1{font-size:46px}}
+@media(max-width:600px){.topBtns{display:none}.hero{padding:50px 0}.heroVisual{min-height:300px}.cleanPerson{font-size:115px}.quote{font-size:18px}.serviceGrid,.reviewGrid,.galleryGrid{grid-template-columns:1fr}.photo.big{grid-row:auto;min-height:250px}.features{grid-template-columns:1fr}.footerGrid{grid-template-columns:1fr}h1{font-size:39px}.sectionHead h2,.aboutText h2{font-size:30px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container nav">
+<a class="brand" href="#">
+<div class="logoMark">M</div>
+<div><b>MURUGAN</b><small>HOUSE CLEANING SERVICE</small></div>
+</a>
+<nav>
+<a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+</nav>
+<div class="topBtns">
+<a class="topBtn call" href="tel:+919600221005">☎ +91 9600221005</a>
+<a class="topBtn wa" href="https://wa.me/919600221005">WhatsApp</a>
+</div>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container heroGrid">
+<div>
+<div class="eyebrow">PROFESSIONAL • TRUSTED • AFFORDABLE</div>
+<h1>Make Your Home<br><span>Sparkle Again</span></h1>
+<p>Professional house cleaning services for a cleaner, healthier and happier home. We clean with care and attention to detail.</p>
+<div class="trust">
+<div><span class="iconCircle">✓</span>Safe & Reliable</div>
+<div><span class="iconCircle">🌿</span>Eco Friendly</div>
+<div><span class="iconCircle">★</span>Trained Staff</div>
+<div><span class="iconCircle">◷</span>On-Time Service</div>
+</div>
+<div class="actions">
+<a class="btn btnBlue" href="tel:+919600221005">☎ Call Now +91 9600221005</a>
+<a class="btn" style="background:#18b957;color:#fff" href="https://wa.me/919600221005">◉ WhatsApp Now</a>
+<a class="btn" style="background:#1877f2;color:#fff" href="https://www.facebook.com/share/1bRAsqkEbK/" target="_blank" rel="noopener">f Facebook</a>
+<a class="btn" style="background:#d62976;color:#fff" href="https://www.instagram.com/muruganhcs/" target="_blank" rel="noopener">◎ Instagram</a>
+</div>
+</div>
+<div class="heroVisual">
+<div class="floors"></div><div class="cleanPerson">🧹</div>
+<div class="quote">Clean Spaces<br>Create<br>Happy Faces</div>
+</div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="sectionHead"><div class="eyebrow">WHAT WE OFFER</div><h2>Our Services</h2><p>From deep cleaning to regular maintenance, we handle it all.</p></div>
+<div class="serviceGrid">
+<div class="card"><div class="cardTop">🏠</div><div class="cardBody"><h3>General House Cleaning</h3><p>Complete home cleaning for a fresh and healthy space.</p></div></div>
+<div class="card"><div class="cardTop">🛋️</div><div class="cardBody"><h3>Sofa Cleaning</h3><p>Remove dirt, stains and allergens from your sofa.</p></div></div>
+<div class="card"><div class="cardTop">🚿</div><div class="cardBody"><h3>Bathroom Cleaning</h3><p>Hygienic and germ-free bathroom cleaning.</p></div></div>
+<div class="card"><div class="cardTop">🍳</div><div class="cardBody"><h3>Kitchen Cleaning</h3><p>Grease, oil and tough stain removal.</p></div></div>
+<div class="card"><div class="cardTop">✨</div><div class="cardBody"><h3>Floor Cleaning</h3><p>Shiny and spotless floors for a better home.</p></div></div>
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container aboutGrid">
+<div class="aboutVisual">🧴🧽</div>
+<div class="aboutText">
+<div class="eyebrow">ABOUT US</div><h2>MURUGAN HOUSE CLEANING SERVICE</h2>
+<p>We are committed to delivering high-quality cleaning solutions for homes, apartments and offices. Our team focuses on careful work, dependable service and customer satisfaction.</p>
+<p><b>— M. LAKSHMI</b><br><span style="color:#60708a">Proprietor</span></p>
+<div class="features">
+<div class="feature"><b>👥</b><div><strong>Professional Team</strong><span>Skilled and trained staff.</span></div></div>
+<div class="feature"><b>✓</b><div><strong>Quality Cleaning</strong><span>Safe & effective products.</span></div></div>
+<div class="feature"><b>◷</b><div><strong>Flexible Scheduling</strong><span>As per your convenience.</span></div></div>
+<div class="feature"><b>♥</b><div><strong>Customer Satisfaction</strong><span>Your happiness matters.</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+<div class="sectionHead"><div class="eyebrow">OUR GALLERY</div><h2>Our Work</h2><p>See the difference we make.</p></div>
+<div class="galleryGrid">
+<div class="photo big">🏠✨</div><div class="photo">🛋️</div><div class="photo">🍳</div><div class="photo">🚿</div><div class="photo">🪟</div>
+</div>
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<div class="container">
+<div class="sectionHead"><div class="eyebrow">WHAT OUR CUSTOMERS SAY</div><h2>Customer Reviews</h2><p>Real stories. Real satisfaction.</p></div>
+<div class="reviewGrid">
+<div class="review"><div class="stars">★★★★★</div><p>See our genuine customer feedback on Google.</p><a class="btn btnBlue" href="https://g.page/r/CcfglXoivf4eEBM/review" target="_blank" rel="noopener">Read / Write a Google Review</a></div>
+<div class="review"><div class="stars">Google Reviews</div><p>We value every customer's feedback. Please visit our Google Business Profile to read reviews from real customers.</p><a class="btn btnGold" href="https://g.page/r/CcfglXoivf4eEBM/review" target="_blank" rel="noopener">View on Google</a></div>
+<div class="review"><div class="stars">⭐</div><p>Your honest review helps our local cleaning service grow.</p><a class="btn btnBlue" href="https://g.page/r/CcfglXoivf4eEBM/review" target="_blank" rel="noopener">Write a Review</a></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container contactBox">
+<h2>Ready for a Cleaner Home?</h2><p>Call or WhatsApp us today to discuss your cleaning requirement.</p>
+<div class="contactBtns">
+<a class="btn" style="background:#fff;color:#062b5c" href="tel:+919600221005">☎ Call +91 9600221005</a>
+<a class="btn" style="background:#18b957;color:#fff" href="https://wa.me/919600221005">WhatsApp +91 9600221005</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footerGrid">
+<div class="footerBrand"><b>✦ MURUGAN</b><p>HOUSE CLEANING SERVICE</p><small>Clean Home • Happy Life</small></div>
+<div><div class="footerTitle">Quick Links</div><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a></div>
+<div><div class="footerTitle">Contact Us</div><a href="tel:+919600221005">☎ +91 9600221005</a><a href="https://wa.me/919600221005">WhatsApp</a><a href="https://www.facebook.com/share/1bRAsqkEbK/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/muruganhcs/" target="_blank" rel="noopener">Instagram</a><a href="#contact">Service Enquiry</a></div>
+<div><div class="footerTitle">Service Area</div><p>Thoothukudi & Tirunelveli Surrounding Areas</p></div>
+</div>
+<div class="container copy">© 2026 Murugan House Cleaning Service. All Rights Reserved.</div>
+</footer>
+</body>
+</html>
