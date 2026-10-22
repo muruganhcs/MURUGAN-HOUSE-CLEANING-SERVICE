@@ -52,6 +52,17 @@ section{padding:72px 0}
 footer{background:#031f43;color:#c9d9eb;padding:42px 0 20px}.footerGrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}.footerTitle{color:#fff;font-size:18px;margin-bottom:10px}.footerBrand b{color:var(--gold);font-size:24px}.footerGrid a{color:#c9d9eb;text-decoration:none;display:block;margin:5px 0;font-size:14px}.copy{border-top:1px solid #315274;margin-top:30px;padding-top:16px;text-align:center;font-size:12px}
 @media(max-width:950px){nav{display:none}.heroGrid,.aboutGrid{grid-template-columns:1fr}.serviceGrid{grid-template-columns:repeat(2,1fr)}.footerGrid{grid-template-columns:1fr 1fr}h1{font-size:46px}}
 @media(max-width:600px){.topBtns{display:none}.hero{padding:50px 0}.heroVisual{min-height:300px}.cleanPerson{font-size:115px}.quote{font-size:18px}.serviceGrid,.reviewGrid,.galleryGrid{grid-template-columns:1fr}.photo.big{grid-row:auto;min-height:250px}.features{grid-template-columns:1fr}.footerGrid{grid-template-columns:1fr}h1{font-size:39px}.sectionHead h2,.aboutText h2{font-size:30px}}
+
+.bookingForm{max-width:760px;margin:28px auto 0;background:#fff;color:#102d55;padding:24px;border-radius:18px;box-shadow:0 12px 35px #001c3a25;text-align:left}
+.bookingGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bookingForm label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+.bookingForm input,.bookingForm select,.bookingForm textarea{width:100%;padding:12px;border:1px solid #cfdae8;border-radius:10px;font:inherit;background:#fff;color:#102d55}
+.bookingForm textarea{min-height:90px;resize:vertical}
+.bookingForm .full{grid-column:1/-1}
+.bookingSubmit{border:0;cursor:pointer;font:inherit;font-weight:800;padding:14px 22px;border-radius:26px;background:#18b957;color:#fff;width:100%}
+.bookingNote{font-size:13px!important;color:#60708a!important;margin:12px 0 0!important}
+@media(max-width:600px){.bookingGrid{grid-template-columns:1fr}.bookingForm{padding:17px}.bookingForm .full{grid-column:auto}}
+
 </style>
 </head>
 <body>
@@ -63,7 +74,7 @@ footer{background:#031f43;color:#c9d9eb;padding:42px 0 20px}.footerGrid{display:
 <div><b>MURUGAN</b><small>HOUSE CLEANING SERVICE</small></div>
 </a>
 <nav>
-<a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+<a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#booking">Book Now</a><a href="#contact">Contact</a>
 </nav>
 <div class="topBtns">
 <a class="topBtn call" href="tel:+919600221005">☎ +91 9600221005</a>
@@ -149,6 +160,59 @@ footer{background:#031f43;color:#c9d9eb;padding:42px 0 20px}.footerGrid{display:
 </div>
 </section>
 
+
+<section id="booking" style="background:#f3f8ff">
+  <div class="container contactBox" style="color:#102d55">
+    <div class="sectionHead">
+      <div class="eyebrow">WHATSAPP BOOKING</div>
+      <h2>Book a Cleaning Service</h2>
+      <p>Fill in your details. Your booking request will open in WhatsApp for you to send.</p>
+    </div>
+    <form class="bookingForm" id="whatsappBookingForm">
+      <div class="bookingGrid">
+        <div>
+          <label for="bookingName">Your Name *</label>
+          <input id="bookingName" name="name" autocomplete="name" required placeholder="Enter your name">
+        </div>
+        <div>
+          <label for="bookingPhone">Mobile Number *</label>
+          <input id="bookingPhone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9+ ()-]{8,18}" placeholder="Enter mobile number">
+        </div>
+        <div>
+          <label for="bookingService">Cleaning Service *</label>
+          <select id="bookingService" name="service" required>
+            <option value="">Choose a service</option>
+            <option>General House Cleaning</option>
+            <option>Sofa Cleaning</option>
+            <option>Bathroom Cleaning</option>
+            <option>Kitchen Cleaning</option>
+            <option>Floor Cleaning</option>
+            <option>Apartment Cleaning</option>
+            <option>Office Cleaning</option>
+            <option>Other / Need advice</option>
+          </select>
+        </div>
+        <div>
+          <label for="bookingDate">Preferred Date</label>
+          <input id="bookingDate" name="date" type="date">
+        </div>
+        <div class="full">
+          <label for="bookingLocation">Service Location *</label>
+          <input id="bookingLocation" name="location" required placeholder="Area / street / town">
+        </div>
+        <div class="full">
+          <label for="bookingNotes">Extra Details (optional)</label>
+          <textarea id="bookingNotes" name="notes" placeholder="Tell us about the cleaning needed"></textarea>
+        </div>
+        <div class="full">
+          <button class="bookingSubmit" type="submit">Send Booking Request on WhatsApp</button>
+          <p class="bookingNote">This opens WhatsApp with your details filled in. Please press Send in WhatsApp to submit your request.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
 <section class="contact" id="contact">
 <div class="container contactBox">
 <h2>Ready for a Cleaner Home?</h2><p>Call or WhatsApp us today to discuss your cleaning requirement.</p>
@@ -163,11 +227,40 @@ footer{background:#031f43;color:#c9d9eb;padding:42px 0 20px}.footerGrid{display:
 <footer>
 <div class="container footerGrid">
 <div class="footerBrand"><b>✦ MURUGAN</b><p>HOUSE CLEANING SERVICE</p><small>Clean Home • Happy Life</small></div>
-<div><div class="footerTitle">Quick Links</div><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a></div>
+<div><div class="footerTitle">Quick Links</div><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About Us</a><a href="#work">Our Work</a><a href="#reviews">Reviews</a><a href="#booking">Book Now</a></div>
 <div><div class="footerTitle">Contact Us</div><a href="tel:+919600221005">☎ +91 9600221005</a><a href="https://wa.me/919600221005">WhatsApp</a><a href="https://www.facebook.com/share/1bRAsqkEbK/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/muruganhcs/" target="_blank" rel="noopener">Instagram</a><a href="#contact">Service Enquiry</a></div>
 <div><div class="footerTitle">Service Area</div><p>Thoothukudi & Tirunelveli Surrounding Areas</p></div>
 </div>
 <div class="container copy">© 2026 Murugan House Cleaning Service. All Rights Reserved.</div>
 </footer>
+
+<script>
+(function () {
+  const form = document.getElementById('whatsappBookingForm');
+  if (!form) return;
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const name = document.getElementById('bookingName').value.trim();
+    const phone = document.getElementById('bookingPhone').value.trim();
+    const service = document.getElementById('bookingService').value;
+    const date = document.getElementById('bookingDate').value || 'Not specified';
+    const location = document.getElementById('bookingLocation').value.trim();
+    const notes = document.getElementById('bookingNotes').value.trim() || 'None';
+    const message = [
+      'Hello Murugan House Cleaning Service, I would like to request a booking.',
+      '',
+      'Name: ' + name,
+      'Customer mobile: ' + phone,
+      'Service: ' + service,
+      'Preferred date: ' + date,
+      'Location: ' + location,
+      'Extra details: ' + notes
+    ].join('\n');
+    const url = 'https://wa.me/919600221005?text=' + encodeURIComponent(message);
+    window.open(url, '_blank', 'noopener,noreferrer');
+  });
+})();
+</script>
+
 </body>
 </html>
